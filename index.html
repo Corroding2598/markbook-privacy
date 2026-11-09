@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>鸿签（MarkBook）隐私政策</title>
+<meta name="description" content="鸿签（MarkBook）HarmonyOS 客户端隐私政策：不收集设备标识，数据仅存本机，不同步到开发者服务器。">
+<style>
+  :root {
+    --text: #1b2430;
+    --muted: #5c6675;
+    --faint: #8a93a3;
+    --line: #e3eaf4;
+    --bg: #ffffff;
+    --surface: #f7faff;
+    --accent: #0a59f7;
+    --warn: #b4451f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #e8eef7;
+      --muted: #a7b2c2;
+      --faint: #7d8798;
+      --line: #2a3546;
+      --bg: #0f1626;
+      --surface: #162034;
+      --accent: #6fa8ff;
+      --warn: #ff9c76;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px 72px;
+  }
+  header { margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  h1 { font-size: 26px; line-height: 1.35; margin: 0 0 12px; font-weight: 600; }
+  .meta { color: var(--faint); font-size: 13px; margin: 0; }
+  .meta span + span::before { content: "·"; margin: 0 8px; }
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 40px 0 14px;
+    padding-left: 12px;
+    border-left: 3px solid var(--accent);
+    line-height: 1.4;
+  }
+  h3 { font-size: 16px; font-weight: 600; margin: 26px 0 10px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  strong { font-weight: 600; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 0.9em;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 1px 5px;
+  }
+  .lead {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 0 0 24px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 18px;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th { color: var(--muted); font-weight: 600; background: var(--surface); }
+  .todo {
+    color: var(--warn);
+    font-weight: 600;
+    border-bottom: 1px dashed currentColor;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--faint);
+    font-size: 13px;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>鸿签（MarkBook）隐私政策</h1>
+    <p class="meta"><span>生效日期：2026 年 11 月 9 日</span><span>版本 1.0</span></p>
+  </header>
+
+  <p class="lead">
+    本政策适用于「鸿签」（应用包名 <code>cn.hongqian.markbook</code>，以下简称“本应用”）HarmonyOS 客户端。
+    本应用由 范祺玥（以下简称“我们”）独立开发并运营。<br>
+    我们不需要你注册账号，也不设服务器保存你的数据。本政策的目的，是清楚说明本应用会接触哪些信息、为什么接触、这些信息去了哪里。
+  </p>
+
+  <h2>一、我们不会收集的信息</h2>
+  <p>本应用<strong>不收集、不上传、不共享</strong>下列信息：</p>
+  <ul>
+    <li>设备标识符（IMEI、OAID、IDFA、设备序列号等）</li>
+    <li>手机号、邮箱、身份证件等身份信息</li>
+    <li>精确或粗略地理位置</li>
+    <li>通讯录、短信、通话记录</li>
+    <li>相册、麦克风、摄像头、剪贴板</li>
+    <li>应用列表、已安装应用信息</li>
+    <li>使用行为、点击埋点、崩溃堆栈</li>
+  </ul>
+  <p>本应用<strong>不接入任何第三方统计、广告、推送、崩溃上报 SDK</strong>。</p>
+
+  <h2>二、本机保存的信息</h2>
+  <p>以下信息仅保存在你的设备本地，存储于本应用沙箱内，不会上传至我们的服务器（我们也没有服务器）：</p>
+  <table>
+    <thead>
+      <tr><th>信息</th><th>用途</th><th>保存期限</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>书签记录（标题、网址、所属文件夹、创建与修改时间、删除标记）</td>
+        <td>实现书签管理与本地搜索</td>
+        <td>直至你在应用内删除或卸载应用</td>
+      </tr>
+      <tr>
+        <td>文件夹结构与排序</td>
+        <td>实现分类浏览</td>
+        <td>同上</td>
+      </tr>
+      <tr>
+        <td>回收站记录</td>
+        <td>支持删除后恢复</td>
+        <td>直至你清空回收站或卸载应用</td>
+      </tr>
+      <tr>
+        <td>显示设置（主题模式等）</td>
+        <td>记住你的显示偏好</td>
+        <td>直至卸载应用</td>
+      </tr>
+      <tr>
+        <td>同步设置（WebDAV 服务器地址、账号、应用密码）</td>
+        <td>连接你指定的同步服务器</td>
+        <td>直至你在设置中清空或卸载应用</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    其中<strong>同步设置中的账号与应用密码属于敏感信息</strong>，仅保存在本机应用沙箱的文件中，未加密存储，
+    也不进入同步快照、导出文件或应用日志。请你使用专门为该用途生成的「应用密码」，不要使用第三方服务的登录密码。
+  </p>
+
+  <h2>三、网络请求</h2>
+  <p>
+    本应用仅申请一项系统权限：<strong>网络访问（<code>ohos.permission.INTERNET</code>）</strong>。
+    网络请求只发生在以下两种情形：
+  </p>
+
+  <h3>1. WebDAV 同步（由你主动开启）</h3>
+  <p>
+    只有你在「设置」中自行填写 WebDAV 服务器地址、账号和应用密码，并点击「立即同步」后，
+    本应用才会连接<strong>你指定的那台服务器</strong>，执行文件的上传、下载与删除。
+  </p>
+  <ul>
+    <li>传输的数据内容：书签快照文件（包含书签标题、网址、文件夹结构、时间戳，以及一个<strong>本机随机生成的匿名标识</strong>，用于区分是哪台设备写入的数据。该标识不来自 IMEI、OAID、序列号等任何硬件信息，也不与其他应用或服务关联）</li>
+    <li>数据接收方：<strong>你填写的 WebDAV 服务提供方</strong>，例如坚果云。该服务方对数据的处理受其自身隐私政策约束，与我们无关</li>
+    <li>本应用不设默认服务器，也不会将你的数据发送到我们或任何第三方的地址</li>
+    <li>若你从不填写同步设置，本应用不会发起任何网络请求（除你主动打开书签链接外）</li>
+  </ul>
+
+  <h3>2. 打开书签链接</h3>
+  <p>
+    当你点击一条书签时，本应用通过系统能力把网址交给已安装的浏览器打开。
+    此后页面访问行为由该浏览器及其对应网站负责，与本应用无关。
+  </p>
+
+  <h2>四、信息的对外提供</h2>
+  <p>
+    除上述「你主动开启的 WebDAV 同步」外，我们<strong>不会</strong>向任何第三方提供、转让、公开披露你的信息。
+  </p>
+  <p>本应用不含任何第三方 SDK，因此不存在通过 SDK 共享信息的情形。</p>
+
+  <h2>五、你的权利</h2>
+  <ul>
+    <li><strong>查看与更正</strong>：所有书签数据均可在应用内直接查看和修改</li>
+    <li><strong>删除</strong>：可删除单条书签、整个文件夹，或清空回收站；卸载应用将删除本机全部应用数据</li>
+    <li><strong>撤回同意</strong>：卸载应用即视为撤回同意。你也可以在系统设置中清除本应用数据</li>
+    <li><strong>拒绝网络功能</strong>：不填写 WebDAV 设置即可完全离线使用</li>
+  </ul>
+  <p>由于我们不持有你的任何数据，我们无法、也无需为你提供远程的数据导出或删除服务。</p>
+
+  <h2>六、未成年人保护</h2>
+  <p>
+    本应用为通用书签工具，不面向未成年人单独设计，不收集任何年龄信息，也不含社交、付费或内容推荐功能。
+    未成年人使用本应用应在监护人指导下进行。
+  </p>
+
+  <h2>七、政策更新</h2>
+  <p>
+    本政策内容发生实质变化时，我们会更新版本号，并在应用下次启动时重新征求你的同意。
+    更新后的政策自标注的生效日期起施行。
+  </p>
+
+  <h2>八、联系我们</h2>
+  <p>如对本政策有疑问、意见或投诉，可通过以下方式联系：</p>
+  <ul>
+    <li>邮箱：<a href="mailto:nyanpasunyan@qq.com">nyanpasunyan@qq.com</a></li>
+  </ul>
+  <p>我们会在收到后 15 个工作日内答复。</p>
+
+  <footer>
+    鸿签（MarkBook）· 应用包名 cn.hongqian.markbook
+  </footer>
+</main>
+</body>
+</html>
