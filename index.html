@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>鸿签（MarkBook）隐私政策</title>
+    <style>
+      :root {
+        --bg: #f4f7fc;
+        --surface: #ffffff;
+        --text: #111827;
+        --muted: #4b5563;
+        --faint: #6b7280;
+        --line: #e5e7eb;
+        --accent: #0a59f7;
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --surface: #161f30;
+          --text: #f2f5fa;
+          --muted: #b7c0ce;
+          --faint: #8d97a6;
+          --line: #2a3a55;
+          --accent: #6fa8ff;
+          color-scheme: dark;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'HarmonyOS Sans SC', 'Segoe UI', system-ui, -apple-system, sans-serif;
+        line-height: 1.75;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 20px 64px;
+      }
+      article {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 28px 24px;
+      }
+      h1 { margin: 0 0 4px; font-size: 24px; }
+      h2 { margin: 28px 0 8px; font-size: 17px; }
+      p, li { color: var(--muted); font-size: 14px; }
+      .meta { color: var(--faint); font-size: 12px; margin-bottom: 20px; }
+      table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px; }
+      th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+      th { color: var(--text); background: var(--bg); }
+      strong { color: var(--text); }
+      a { color: var(--accent); }
+      code { font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>鸿签（MarkBook）隐私政策</h1>
+        <p class="meta">生效日期：2026 年 11 月 15 日 · 版本 2.0</p>
+
+        <p>本政策适用于「鸿签」（应用包名 <code>cn.hongqian.markbook</code>）HarmonyOS 客户端与配套浏览器扩展。本应用由范祺玥独立开发并运营。</p>
+        <p>我们不需要你注册账号，也不设服务器保存你的数据。本政策的目的是清楚说明应用会接触哪些信息、为什么接触、这些信息去了哪里。</p>
+
+        <h2>一、我们不会收集的信息</h2>
+        <p>本应用不收集、不上传、不共享以下信息：</p>
+        <ul>
+          <li>设备标识符（IMEI、OAID、IDFA、设备序列号等）</li>
+          <li>手机号、邮箱、身份证件等身份信息</li>
+          <li>精确或粗略地理位置</li>
+          <li>通讯录、短信、通话记录</li>
+          <li>相册、麦克风、摄像头、剪贴板</li>
+          <li>应用列表、已安装应用信息</li>
+          <li>使用行为、点击埋点、崩溃堆栈</li>
+        </ul>
+        <p>本应用不接入任何第三方统计、广告、推送、崩溃上报 SDK。</p>
+
+        <h2>二、本机保存的信息</h2>
+        <p>以下信息仅保存在你的设备本地，存储于应用沙箱或浏览器扩展本地存储中：</p>
+        <table>
+          <thead><tr><th>信息</th><th>用途</th><th>保存期限</th></tr></thead>
+          <tbody>
+            <tr><td>书签记录（标题、网址、所属文件夹、排序、修改时间、本机随机设备标识）</td><td>实现书签管理、排序与多端合并</td><td>直至你在应用内删除或卸载应用</td></tr>
+            <tr><td>文件夹结构与排序</td><td>实现分类浏览</td><td>同上</td></tr>
+            <tr><td>删除传播记录</td><td>让删除同步到其他设备；不在界面展示，不进入 JSON 备份</td><td>长期保留用于删除传播，直至卸载应用</td></tr>
+            <tr><td>显示设置（主题模式等）</td><td>记住你的显示偏好</td><td>直至卸载应用</td></tr>
+            <tr><td>同步设置（WebDAV 地址、账号、应用密码）</td><td>连接你指定的同步服务器</td><td>直至你在设置中清空或卸载应用</td></tr>
+          </tbody>
+        </table>
+        <p>同步设置中的账号与应用密码属于敏感信息，仅保存在本机应用沙箱或扩展本地存储中，未加密存储，也不进入同步快照、导出文件或应用日志。请使用专门为该用途生成的「应用密码」，不要使用第三方服务的登录密码。</p>
+        <p>应用不提供回收站。删除后提供 4.5 秒撤回；撤回副本只存在于当前运行界面内，不落盘、不进入备份、不参与同步。</p>
+
+        <h2>三、系统权限与网络请求</h2>
+        <p>应用仅申请一项系统权限：网络访问（<code>ohos.permission.INTERNET</code>），仅用于 WebDAV 同步与你主动打开的书签链接。扩展仅申请 <code>bookmarks</code> 与 <code>storage</code> 权限，并在你点击测试连接或同步时申请对应 WebDAV 站点的访问权限。</p>
+        <p>网络请求只发生在以下情形：</p>
+        <h3>1. WebDAV 同步（由你配置并触发）</h3>
+        <p>只有你在设置中自行填写 WebDAV 地址、账号和应用密码后，应用才会连接你指定的服务器。地址强制 HTTPS，<code>http://</code> 地址拒绝保存与同步。</p>
+        <ul>
+          <li>传输内容：书签与文件夹快照（标题、网址、层级、排序、修改时间、本机随机设备标识、删除传播记录）</li>
+          <li>数据接收方：你填写的 WebDAV 服务提供方（如坚果云、Nextcloud、群晖或自建服务），其处理受该服务方隐私政策约束</li>
+          <li>应用不设默认服务器，不将数据发送到开发者或任何第三方地址</li>
+          <li>「打开时同步」默认关闭；开启后手机仅在冷启动尝试一次，扩展在点击工具栏插件按钮打开弹窗时尝试。不实现定时同步、书签事件同步或后台自动重试</li>
+        </ul>
+        <h3>2. 打开书签链接</h3>
+        <p>当你点击书签时，应用通过系统能力把网址交给已安装的浏览器打开。此后页面访问行为由该浏览器及对应网站负责。</p>
+
+        <h2>四、信息的对外提供</h2>
+        <p>除上述你主动配置的 WebDAV 同步外，我们不会向任何第三方提供、转让或公开披露你的信息。应用不含第三方 SDK。</p>
+
+        <h2>五、你的权利</h2>
+        <ul>
+          <li>查看与更正：所有书签数据均可在应用内直接查看和修改</li>
+          <li>删除：可删除单条书签或整个文件夹；卸载应用将删除本机全部应用数据</li>
+          <li>撤回同意：卸载应用即视为撤回同意；也可在系统设置中清除本应用数据</li>
+          <li>拒绝网络功能：不填写 WebDAV 设置即可完全离线使用</li>
+        </ul>
+        <p>由于我们不持有你的任何数据，我们无法、也无需提供远程数据导出或删除服务。</p>
+
+        <h2>六、未成年人保护</h2>
+        <p>本应用为通用书签工具，不面向未成年人单独设计，不收集年龄信息，不含社交、付费或内容推荐功能。未成年人使用应在监护人指导下进行。</p>
+
+        <h2>七、政策更新</h2>
+        <p>本政策内容发生实质变化时，我们会更新版本号，并在应用下次启动时重新征求你的同意。更新后的政策自标注的生效日期起施行。</p>
+
+        <h2>八、联系我们</h2>
+        <p>如对本政策有疑问、意见或投诉，可通过以下方式联系：</p>
+        <ul><li>QQ：202143824</li></ul>
+        <p>我们会在收到后 15 个工作日内答复。</p>
+      </article>
+    </main>
+  </body>
+</html>
